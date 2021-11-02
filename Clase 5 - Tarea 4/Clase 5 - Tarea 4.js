@@ -6,7 +6,6 @@ for (let i = 0; i < listado.length; i++){
     array.push(Number(listado[i].textContent))
 }
 
-// calcular promedio
 
 function calcularPromedio (){
     let sumatoria = 0
@@ -15,24 +14,22 @@ function calcularPromedio (){
         sumatoria += array[i]
     }
     let promedio = sumatoria / array.length
-    return Math.floor(promedio)
+    return document.querySelector(".promedio").textContent = 'El promedio de estos numeros es ' + Math.floor(promedio)
 }
-document.querySelector(".promedio").textContent = 'El promedio de estos numeros es ' + calcularPromedio(array)
 
-// numero mas pequeño
+calcularPromedio ()
 
-function econtrarNumeroMenor (){
+function encontrarNumeroMenor (){
     let numeroMasChico = array[0]
     for (let i = 0; i < array.length; i++){
         if (array[i] < numeroMasChico){
             numeroMasChico = array[i]
         }
     }
-    return numeroMasChico
+    return document.querySelector(".numero-mas-pequeño").textContent = 'El numero más chico es ' + numeroMasChico
 }
-document.querySelector(".numero-mas-pequeño").textContent = 'El numero más chico es ' + econtrarNumeroMenor(array)
 
-// numero mas grande
+encontrarNumeroMenor ()
 
 function encontrarNumeroMayor (){
     let numeroMasGrande = array[0]
@@ -41,11 +38,10 @@ function encontrarNumeroMayor (){
             numeroMasGrande = array[i]
         }
     }
-    return numeroMasGrande
+    return document.querySelector(".numero-mas-grande").textContent = 'El numero más grande es ' + numeroMasGrande
 }
-document.querySelector(".numero-mas-grande").textContent = 'El numero más grande es ' + encontrarNumeroMayor(array)
 
-// numero mas frecuente
+encontrarNumeroMayor ()
 
 function encontrarNumeroMasFrecuente (){
     let numeroMasFrecuente = 0
@@ -62,6 +58,7 @@ function encontrarNumeroMasFrecuente (){
             numeroMasFrecuente = array[i]
         }
     }
-    return numeroMasFrecuente
+    return document.querySelector(".numero-mas-frecuente").textContent = 'El numero mas frecuente es ' + numeroMasFrecuente
 }
-document.querySelector(".numero-mas-frecuente").textContent = 'El numero mas frecuente es ' + encontrarNumeroMasFrecuente(array)
+
+encontrarNumeroMasFrecuente ()
