@@ -7,7 +7,7 @@ for (let i = 0; i < listado.length; i++){
 }
 
 
-function calcularPromedio (){
+function calcularPromedio(){
     let sumatoria = 0
 
     for (let i = 0; i < array.length; i++){
@@ -17,7 +17,7 @@ function calcularPromedio (){
     return document.querySelector(".promedio").textContent = 'El promedio de estos numeros es ' + Math.floor(promedio)
 }
 
-calcularPromedio ()
+calcularPromedio(array)
 
 function encontrarNumeroMenor (){
     let numeroMasChico = array[0]
@@ -29,7 +29,7 @@ function encontrarNumeroMenor (){
     return document.querySelector(".numero-mas-pequeño").textContent = 'El numero más chico es ' + numeroMasChico
 }
 
-encontrarNumeroMenor ()
+encontrarNumeroMenor(array)
 
 function encontrarNumeroMayor (){
     let numeroMasGrande = array[0]
@@ -41,7 +41,7 @@ function encontrarNumeroMayor (){
     return document.querySelector(".numero-mas-grande").textContent = 'El numero más grande es ' + numeroMasGrande
 }
 
-encontrarNumeroMayor ()
+encontrarNumeroMayor(array)
 
 function encontrarNumeroMasFrecuente (){
     let numeroMasFrecuente = 0
@@ -61,4 +61,4 @@ function encontrarNumeroMasFrecuente (){
     return document.querySelector(".numero-mas-frecuente").textContent = 'El numero mas frecuente es ' + numeroMasFrecuente
 }
 
-encontrarNumeroMasFrecuente ()
+encontrarNumeroMasFrecuente(array)
